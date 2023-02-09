@@ -30,7 +30,8 @@ export default function Popup({ id }) {
   console.log(data);
   return (
     close && (
-      <div className={css.popup}>
+    <div className={css.main_popup}>
+          <div className={css.popup}>
         <button onClick={() => setclose(null)} className={css.close}>
           X
         </button>
@@ -42,6 +43,7 @@ export default function Popup({ id }) {
         <div>Post_time :{data.message.post_time}</div>
         <div>Author :{data.message.author.login}</div>
       </div>
+    </div>
     )
   );
 }
